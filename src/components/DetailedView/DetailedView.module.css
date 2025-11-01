@@ -1,0 +1,18 @@
+.detailedView h2 {
+  text-transform: capitalize; 
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  background: #eee;
+  border-radius: 20px;
+  color: #333;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.backLink:hover {
+  background: #ddd;
+}
