@@ -1,16 +1,71 @@
-# React + Vite
+# 🌦️ Get Weather Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek and responsive weather analytics dashboard built with React, Redux Toolkit, and Recharts. This application allows users to search for cities, save their favorites, and view detailed weather analytics, including current conditions, 5-day forecasts, and interactive charts.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Live Weather Cards:** A main dashboard showing at-a-glance weather for all your favorite cities.
+* **API-Based Search:** An autocomplete search bar that finds cities using the OpenWeatherMap Geocoding API.
+* **Persistent Favorites:** Favorite cities are saved to `localStorage`, so they're always there when you come back.
+* **C° / F° Toggle:** Instantly convert all temperature data between Celsius and Fahrenheit.
+* **Detailed Analytics View:** A dedicated page for each city with in-depth charts and stats.
+* **Interactive Charts (via Recharts):**
+    * **Hourly Temp:** A line chart showing temperature trends for the next 24 hours.
+    * **5-Day Forecast:** A combo chart showing high/low temps (bars) and precipitation chance (line).
+    * **Wind Chart:** A line chart for wind speed, with a custom tooltip showing wind direction.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+* **Frontend:** [React](https://reactjs.org/) (with Hooks)
+* **State Management:** [Redux Toolkit](https://redux-toolkit.js.org/)
+* **Routing:** [React Router v6](https://reactrouter.com/)
+* **Data Visualization:** [Recharts](https://recharts.org/)
+* **API Calls:** [Axios](https://axios-http.com/)
+* **Build Tool:** [Vite](https://vitejs.dev/)
+* **Styling:** CSS Modules
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Getting Started
+
+Follow these instructions to get a local copy up and running.
+
+### Prerequisites
+
+* Node.js (v18 or later recommended)
+* `npm` or `yarn`
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/abhinm7/get-weather-dashboard.git
+    ```
+2.  **Navigate to the project directory:**
+    ```bash
+    cd get-weather-dashboard
+    ```
+3.  **Install the dependencies:**
+    ```bash
+    npm install
+    ```
+
+### 4. Set Up Environment Variables
+
+This project requires an API key from OpenWeatherMap.
+
+1.  Create a free account at [OpenWeatherMap.org](https://openweathermap.org/) and get your API key.
+2.  In the root of the project, create a file named `.env`.
+3.  Add your API key to this file. (Vite requires the `VITE_` prefix).
+    ```
+    VITE_OPENWEATHER_API_KEY=your_api_key_goes_here
+    ```
+
+### 5. Run the Application
+
+```bash
+npm run dev
+```
+The application will be available at `http://localhost:5173` (or the next available port).
