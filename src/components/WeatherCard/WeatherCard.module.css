@@ -19,3 +19,40 @@
   margin: 0 0 10px 0;
   color: #2c3e50;
 }
+
+.linkWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+}
+
+.temp {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.description {
+  margin: 5px 0 0 0;
+  text-transform: capitalize;
+  color: #555;
+}
+
+.error {
+  color: #e74c3c;
+  font-weight: 600;
+  margin: 5px 0 0 0;
+}
+.errorSmall {
+  font-size: 0.8rem;
+  color: #c0392b;
+  margin: 0;
+}
