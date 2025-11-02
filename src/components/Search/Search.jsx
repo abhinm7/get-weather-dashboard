@@ -6,7 +6,7 @@ import { useDebounce } from "../../hooks/useDebounce";
 import styles from "./Search.module.css";
 
 const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
-const GEO_API_URL = "http://api.openweathermap.org/geo/1.0/direct";
+const GEO_API_URL = "https://api.openweathermap.org/geo/1.0/direct";
 
 export default function Search() {
   

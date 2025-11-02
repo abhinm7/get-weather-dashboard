@@ -13,7 +13,7 @@ export default function CurrentSummary({
         {forecastData.city.name}, {forecastData.city.country}
       </h2>
       <img
-        src={`http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@4x.png`}
+        src={`https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@4x.png`}
         alt={currentWeather.weather[0].description}
         className={styles.mainIcon}
       />
