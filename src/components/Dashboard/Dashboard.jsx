@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import WeatherCard from '../WeatherCard/WeatherCard';
 import styles from './Dashboard.module.css';
 import SettingsToggle from '../SettingsToggle/SettingsToggle';
-import Search from '../Search/Search.jsx';
+import Search from '../Search-tempname/Search.jsx';
 
 export default function Dashboard() {
   const favoriteCities = useSelector((state) => state.favorites.cities);
