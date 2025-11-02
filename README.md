@@ -2,6 +2,8 @@
 
 A sleek and responsive weather analytics dashboard built with React, Redux Toolkit, and Recharts. This application allows users to search for cities, save their favorites, and view detailed weather analytics, including current conditions, 5-day forecasts, and interactive charts.
 
+LIVE LINK : https://get-weather-dashboard.onrender.com/
+
 ## ✨ Features
 
 * **Live Weather Cards:** A main dashboard showing at-a-glance weather for all your favorite cities.
