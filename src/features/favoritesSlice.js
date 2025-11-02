@@ -1,7 +1,29 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const getInitialCities = () => {
+    try {
+        const serializedCities = localStorage.getItem('favoriteCities');
+        if (serializedCities === null) {
+            return ['Mumbai', 'Manama', 'Bengaluru'];
+        }
+        return JSON.parse(serializedCities);
+    } catch (err) {
+        console.error("Could not load favorites", err);
+        return ['London', 'New York', 'Tokyo'];
+    }
+};
+
+const saveCitiesToStorage = (cities) => {
+    try {
+        const serializedCities = JSON.stringify(cities);
+        localStorage.setItem('favoriteCities', serializedCities);
+    } catch (err) {
+        console.error("Could not save favorites", err);
+    }
+};
+
 const initialState = {
-    cities: ['London', 'New York', 'Tokyo', 'Mumbai'],
+    cities: getInitialCities()
 }
 
 export const favoritesSlice = createSlice({
@@ -9,14 +31,20 @@ export const favoritesSlice = createSlice({
     initialState,
     reducers: {
         addCity: (state, action) => {
-            if (!state.cities.includes(action.payload)) {
-                state.cities.push(action.payload);
+            const city = action.payload;
+            if (!state.cities.find(c => c.toLowerCase() === city.toLowerCase())) {
+                state.cities.push(city);
+                saveCitiesToStorage(state.cities);
             }
         },
         removeCity: (state, action) => {
-            state.cities = state.cities.filter((city) => { action.payload !== city })
-        }
+            const cityToRemove = action.payload;
+            state.cities = state.cities.filter(
+                (city) => city.toLowerCase() !== cityToRemove.toLowerCase()
+            );
+            saveCitiesToStorage(state.cities);
+        },
     }
 });
 export const { addCity, removeCity } = favoritesSlice.actions;
-export default  favoritesSlice.reducer;
+export default favoritesSlice.reducer;

@@ -1,7 +1,13 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
 .dashboard h2 {
-  color: #333;
-  border-bottom: 2px solid #7f8c8d;
+  color: #003391;
+  border-bottom: 2px solid #00eeff;
   padding-bottom: 5px;
+  width: 100%;
 }
 
 .cardContainer {

@@ -1,12 +1,11 @@
 import React from 'react';
 import styles from './Header.module.css'
-import Search from '../search/Search';
+import Search from '../Search/Search';
 
 export default function Header() {
   return (
     <header className={styles.header}>
-      <Search/>
-      <h1>Weather Analytics Dashboard</h1>
+      <h1>Get Weather</h1>
     </header>
   );
 }

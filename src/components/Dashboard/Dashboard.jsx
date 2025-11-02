@@ -2,14 +2,17 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import WeatherCard from '../WeatherCard/WeatherCard';
 import styles from './Dashboard.module.css';
+import Search from '../Search/Search';
+import SettingsToggle from '../SettingsToggle/SettingsToggle';
 
 export default function Dashboard() {
   const favoriteCities = useSelector((state) => state.favorites.cities);
 
   return (
     <div className={styles.dashboard}>
-      <h2>Your Dashboard</h2>
-      
+      <h2>Get Weather Details</h2>
+      <Search/>
+      <SettingsToggle/>
       <div className={styles.cardContainer}>
         {favoriteCities.map((city) => (
           <WeatherCard key={city} cityName={city} />
