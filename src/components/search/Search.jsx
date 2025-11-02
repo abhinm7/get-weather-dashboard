@@ -9,6 +9,7 @@ const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 const GEO_API_URL = "http://api.openweathermap.org/geo/1.0/direct";
 
 export default function Search() {
+  
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
